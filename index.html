@@ -8,63 +8,67 @@
     <style>
         body {
             background-color: grey;
-            position: relative; /* Make the body position relative for absolute positioning */
             font-size: 50px;
             font-family: Courier New;
-            text-align: center; /* Center align the text */
-            margin: 0; /* Remove default margin */
+            text-align: center;
+            margin: 0;
             padding: 0;
             color: white; 
         }
         h1 {
             font-size: 100px;
-            font-family: Courier New;
-            text-align: center; /* Center align the text */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            color: white; /* Text color */
+            margin: 0;
+            padding: 20px 0; /* Added padding to top and bottom for spacing */
+            color: white;
         }
         img {
-            vertical-align: middle; /* Align the image vertically with the text */
-            margin-left: -30px; /* Adjust the margin to make it closer to the text */
+            vertical-align: middle;
+            margin-left: -30px;
         }
-        .side-link {
-            position: absolute;
-            left: 50%; /* Center horizontally */
-            bottom: -70px; /* Adjust bottom position */
-            transform: translateX(-50%); /* Center horizontally */
-
-            color: black; /* Text color */
-            font-size: 50px; /* Adjust font size */
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center the buttons horizontally */
+            align-items: center; /* Align items vertically */
+            gap: 20px; /* Adjust the space between the buttons */
+            padding: 20px; /* Add some padding around the buttons */
         }
         .copy-button {
-            display: block;
-            margin: 20px auto;
+            margin: 0; /* Adjust or remove margin */
             padding: 10px 20px;
             font-size: 24px;
-            background-color: Black;
-            color: white;
+            background-color: white;
+            color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+        .side-link {
+            display: block; /* Changed from absolute to block */
+            margin: 20px auto; /* Center link */
+            color: white;
+            font-size: 50px;
+            text-decoration: none; /* Remove underline from link */
+        }
     </style>
 </head> 
-<b><body>
+<body>
     <h1>
         Axel
-        <img src="3761.png" width="100" />
+        <img src="3761.png" width="100" alt="Logo">
     </h1>
     <a href="https://axel-webs.pages.dev" class="side-link">Axel-Sites</a>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-    <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+    <div class="buttons-container">
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+    </div>
     Just click and copy
 
     <script>
@@ -78,6 +82,5 @@
             alert("Copied to clipboard: " + textToCopy);
         }
     </script>
-</b></body>
-
+</body>
 </html>
