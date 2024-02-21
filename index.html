@@ -27,32 +27,34 @@
         }
         .buttons-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
+            flex-wrap: wrap; /* Allow buttons to wrap if they exceed the width */
+            justify-content: center; /* Center align the buttons horizontally */
+            gap: 20px; /* Space between the button-description pairs */
+            padding: 20px; /* Add some padding around the buttons */
         }
         .button-with-desc {
+            width: calc(20% - 20px); /* Each button takes up one-fifth of the width with some gap */
             text-align: center;
         }
         .copy-button {
             margin: 0;
             padding: 10px 20px;
-            font-size: 24px;
+            font-size: 20px; /* Adjusted font size to fit better */
             background-color: white;
             color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 100%; /* Make button width 100% to fill its container */
         }
         .description {
             background-color: black;
             color: white;
             padding: 10px;
             border-radius: 5px;
-            font-size: 20px;
-            width: 80%; /* Adjust based on your preference */
-            margin: 10px auto; /* Center the description box */
+            font-size: 16px; /* Adjusted font size for description */
+            width: 100%; /* Make description width 100% to fill its container */
+            margin-top: 10px; /* Add some space between button and description */
         }
         .side-link {
             display: block;
@@ -71,7 +73,6 @@
             <button class="copy-button" onclick="copyTextToClipboard(' ')">Funny Codes</button>
             <div class="description">This makes you copy funny codes, that are really really funny</div>
         </div>
-        <!-- Repeat the structure for other buttons and descriptions -->
         <div class="button-with-desc">
             <button class="copy-button" onclick="copyTextToClipboard(' ')">Inspiring Quotes</button>
             <div class="description">Get inspired with a collection of motivational quotes</div>
