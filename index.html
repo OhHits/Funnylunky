@@ -13,12 +13,12 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            color: white; 
+            color: white;
         }
         h1 {
             font-size: 100px;
             margin: 0;
-            padding: 20px 0; /* Added padding to top and bottom for spacing */
+            padding: 20px 0;
             color: white;
         }
         img {
@@ -27,14 +27,16 @@
         }
         .buttons-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center; /* Center the buttons horizontally */
-            align-items: center; /* Align items vertically */
-            gap: 20px; /* Adjust the space between the buttons */
-            padding: 20px; /* Add some padding around the buttons */
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .button-with-desc {
+            text-align: center;
         }
         .copy-button {
-            margin: 0; /* Adjust or remove margin */
+            margin: 0;
             padding: 10px 20px;
             font-size: 24px;
             background-color: white;
@@ -43,34 +45,50 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .description {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+            width: 80%; /* Adjust based on your preference */
+            margin: 10px auto; /* Center the description box */
+        }
         .side-link {
-            display: block; /* Changed from absolute to block */
-            margin: 20px auto; /* Center link */
+            display: block;
+            margin: 20px auto;
             color: white;
             font-size: 50px;
-            text-decoration: none; /* Remove underline from link */
+            text-decoration: none;
         }
     </style>
 </head> 
 <body>
-    <h1>
-        Axel
-        <img src="3761.png" width="100" alt="Logo">
-    </h1>
+    <h1>Axel <img src="3761.png" width="100" alt="Logo"></h1>
     <a href="https://axel-webs.pages.dev" class="side-link">Axel-Sites</a>
     <div class="buttons-container">
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
-        <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">Funny Codes</button>
+            <div class="description">This makes you copy funny codes, that are really really funny</div>
+        </div>
+        <!-- Repeat the structure for other buttons and descriptions -->
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">Inspiring Quotes</button>
+            <div class="description">Get inspired with a collection of motivational quotes</div>
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">Cool Facts</button>
+            <div class="description">Learn cool facts that are absolutely interesting</div>
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">Life Hacks</button>
+            <div class="description">Discover life hacks to simplify your daily tasks</div>
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">Jokes</button>
+            <div class="description">Brighten your day with a dose of laughter</div>
+        </div>
     </div>
-    Just click and copy
-
     <script>
         function copyTextToClipboard(textToCopy) {
             var tempInput = document.createElement("input");
