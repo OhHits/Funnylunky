@@ -30,6 +30,17 @@
             color: black; /* Text color */
             font-size: 50px; /* Adjust font size */
         }
+        .copy-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head> 
 <body>
@@ -38,5 +49,19 @@
         <img src="37631.png" width="100" />
     </h1>
     <a href="https://axel-webs.pages.dev" class="side-link">Axel-Sites</a>
+    <button class="copy-button" onclick="copyTextToClipboard()">Copy "HII"</button>
+
+    <script>
+        function copyTextToClipboard() {
+            var textToCopy = "HII";
+            var tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Copied to clipboard: " + textToCopy);
+        }
+    </script>
 </body>
 </html>
