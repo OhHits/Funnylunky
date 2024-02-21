@@ -9,6 +9,12 @@
         body {
             background-color: grey;
             position: relative; /* Make the body position relative for absolute positioning */
+            font-size: 50px;
+            font-family: Courier New;
+            text-align: center; /* Center align the text */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding *
+            color: white; /* Text color */
         }
         h1 {
             font-size: 100px;
@@ -16,6 +22,7 @@
             text-align: center; /* Center align the text */
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
+            color: white; /* Text color */
         }
         img {
             vertical-align: middle; /* Align the image vertically with the text */
@@ -43,7 +50,7 @@
         }
     </style>
 </head> 
-<body>
+<b><body>
     <h1>
         Axel
         <img src="37631.png" width="100" />
@@ -58,6 +65,7 @@
     <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
     <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
     <button class="copy-button" onclick="copyTextToClipboard(' ')">Copy "NONE"</button>
+    Just click and copy
 
     <script>
         function copyTextToClipboard(textToCopy) {
@@ -70,5 +78,6 @@
             alert("Copied to clipboard: " + textToCopy);
         }
     </script>
-</body>
+</b></body>
+
 </html>
