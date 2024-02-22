@@ -35,7 +35,9 @@
         .button-with-desc {
             width: calc(15% - 4px); /* Each button-description pair takes up 15% of the screen width minus the gap */
             text-align: center;
-            position: relative; /* Make the container for button and description relative */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .copy-button {
             margin: 0;
@@ -56,14 +58,6 @@
             font-size: 16px; /* Adjusted font size for description */
             width: 100%; /* Make description width 100% to fill its container */
             height: auto; /* Allow description box to adjust its height based on content */
-            position: absolute; /* Position the description absolutely */
-            top: -100%; /* Move description above the button */
-            left: 0; /* Center the description horizontally */
-            transition: top 0.3s; /* Add transition for smoother animation */
-            z-index: 1; /* Ensure description appears above the button */
-        }
-        .button-with-desc:hover .description {
-            top: -150%; /* Show description on hover */
         }
         .side-link {
             display: block;
