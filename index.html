@@ -25,11 +25,13 @@
             z-index: 1; /* Ensure h1 is on top */
         }
         h2{
-            font-size: 50;
+            font-size: 100px;
             margin: 0;
+            padding: 20px 0;
             color: white;
-            position: relative;
-            z-index: 2;
+            position: relative; /* Make h1 relative for stacking */
+            z-index: 1; /* Ensure h1 is on top */
+            text-align: left;
         }
         img {
             vertical-align: middle;
@@ -37,7 +39,7 @@
         }
         .header-box {
             width: 100%;
-            height: 150px; /* Increased height to accommodate image */
+            height: 110px; /* Increased height to accommodate image */
             background-color: black;
             position: absolute;
             top: 0;
@@ -88,7 +90,7 @@
 </head>
 <body>
     <h2> <img src="3761.png" width="100" alt="Logo"> </h2>
-    
+    <div class="header-box"></div> 
     <h1>Axel</h1>
     <a href="https://axel-webs.pages.dev" class="side-link">Axel-Sites</a>
     <div class="buttons-container">
