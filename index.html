@@ -7,45 +7,51 @@
     <link rel="icon" href="Braks.png" type="image/x-icon">
     <style>
         body {
-            background-color: grey;
+            background-color: #242526;
             font-size: 50px;
             font-family: Courier New;
             text-align: center;
             margin: 0;
             padding: 0;
             color: white;
+            position: relative; /* Make body relative for absolute positioning */
         }
         h1 {
             font-size: 100px;
             margin: 0;
             padding: 20px 0;
             color: white;
-            position: relative; /* Make the heading box position relative */
+            position: relative; /* Make h1 relative for stacking */
+            z-index: 1; /* Ensure h1 is on top */
+        }
+        img {
+            vertical-align: middle;
+            margin-left: -30px;
         }
         .header-box {
             width: 100%;
-            height: 50px;
+            height: 150px; /* Increased height to accommodate image */
             background-color: black;
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
-            z-index: 999; /* Ensure the box stays on top of other content */
+            z-index: 0; /* Set z-index lower than h1 */
         }
         .header-box img {
             position: absolute;
-            top: 50%;
-            left: 20px; /* Adjust the position as needed */
+            top: 50%; /* Adjusted position to center vertically */
+            left: 20px;
             transform: translateY(-50%);
         }
         .buttons-container {
             display: flex;
-            flex-wrap: wrap; /* Allow buttons to wrap if they exceed the width */
-            justify-content: space-around; /* Center align the buttons horizontally */
-            gap: 4px; /* Space between button-description pairs */
-            padding: 90px 20px 20px; /* Add some padding around the buttons, considering the height of the header box */
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 4px;
+            padding: 90px 20px 20px;
         }
         .button-with-desc {
-            width: calc(15% - 4px); /* Each button-description pair takes up 15% of the screen width minus the gap */
+            width: calc(15% - 4px);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -54,13 +60,13 @@
         .copy-button {
             margin: 0;
             padding: 10px 20px;
-            font-size: 20px; /* Adjusted font size to fit better */
+            font-size: 20px;
             background-color: white;
             color: black;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%; /* Make button width 100% to fill its container */
+            width: 100%;
         }
         .side-link {
             display: block;
@@ -72,10 +78,8 @@
     </style>
 </head> 
 <body>
-    <div class="header-box">
-        <img src="3761.png" width="100" alt="Logo">
-    </div>
-    <h1>Axel</h1>
+    <div class="header-box"></div>
+    <h1>Axel <img src="3761.png" width="100" alt="Logo"></h1>
     <a href="https://axel-webs.pages.dev" class="side-link">Axel-Sites</a>
     <div class="buttons-container">
         <div class="button-with-desc">
