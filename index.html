@@ -62,10 +62,10 @@
             color: white;
             font-size: 50px;
             text-decoration: none;
-            position: absolute;
-            top: 50%;
-            left: calc(50% + 135px); /* Adjusted position for alignment */
-            transform: translateY(-50%);
+            z-index: 1; /* Ensure h3 is on top */
+            text-align: left; /* Set text alignment to left for h3 elements */
+            margin-left: 70px; /* Add 35px margin to the left */
+            margin-top: -10px; /* Adjusted margin-top */
         }
         .buttons-container {
             display: flex;
