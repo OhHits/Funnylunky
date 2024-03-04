@@ -3,115 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel - Bookmarks</title>
+    <link rel="icon" href="Braks.png" type="image/x-icon">
     <style>
         body {
-            background-color: #333333;
-            color: #ffffff;
-        }
-
-        .header {
-            width: 100%;
-            height: 100px;
-            background-color: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-            background-image: url('your-logo-image-url');
-            background-size: contain;
-            background-repeat: no-repeat;
-            margin-right: 10px;
-        }
-
-        .website-name {
-            font-size: 36px;
-            line-height: 46px;
+            background-color: #242526;
+            font-size: 30px;
+            font-family: Courier New;
+            text-align: center;
             margin: 0;
+            padding: 0;
+            color: white;
         }
-
-        .boxes {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 50px;
+        h1 {
+            font-size: 100px;
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            position: relative; /* Make h1 relative for stacking */
+            z-index: 1; /* Ensure h1 is on top */
+            margin-top: -10px; /* Adjusted margin-top */
         }
-
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: #000000;
-            margin: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            position: relative;
+        h3{
+            font-size: 100px;
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            position: relative; /* Make h3 relative for stacking */
+            z-index: 1; /* Ensure h3 is on top */
+            text-align: left; /* Set text alignment to left for h3 elements */
+            margin-left: 35px; /* Add 35px margin to the left */
+            margin-top: -10px; /* Adjusted margin-top */
         }
-
-        .box:before {
-            content: "";
+        h2{
+            font-size: 100px;
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            position: relative; /* Make h3 relative for stacking */
+            z-index: 1; /* Ensure h3 is on top */
+            text-align: left; /* Set text alignment to left for h3 elements */
+            margin-left: 80px; /* Add 35px margin to the left */
+            margin-top: -50px; /* Adjusted margin-top */
+        }
+        img {
+            vertical-align: middle;
+            margin-left: -30px;
+            position: relative; /* Ensure relative positioning */
+            top: -10px; /* Adjusted top position */
+        }
+        .header-box {
+            width: 100%;
+            height: 110px; /* Increased height to accommodate image */
+            background-color: black;
             position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 2px solid #ffffff;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            top: 0; /* Position at the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: 0; /* Set z-index lower than h1 */
         }
-
-        .box:hover:before {
-            opacity: 1;
+        .header-box img {
+            position: absolute;
+            top: 50%; /* Adjusted position to center vertically */
+            left: 0;
+            transform: translateY(-50%);
         }
-
-        .box-text {
-            z-index: 1;
-            font-size: 24px;
-            line-height: 34px;
+        .side-link {
+            display: inline-block;
+            color: white;
+            font-size: 50px;
+            text-decoration: none;
+            z-index: 1; /* Ensure h3 is on top */
+            text-align: left; /* Set text alignment to left for h3 elements */
+            margin-left: -20px; /* Add 35px margin to the left */
+            margin-top: -100px; /* Adjusted margin-top */
+        }
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 4px;
+            padding: 90px 20px 20px;
+        }
+        .button-with-desc {
+            width: calc(15% - 4px);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .copy-button {
             margin: 0;
-        }
-
-        .box-description {
-            font-size: 14px;
-            line-height: 20px;
-            margin: 10px 0 0 0;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
         }
     </style>
-    <script>
-        function copyText(text) {
-            const textarea = document.createElement('textarea');
-            textarea.value = text;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-        }
-    </script>
+   
+   
 </head>
 <body>
-    <div class="header">
-        <div class="logo"></div>
-        <h1 class="website-name">Axel</h1>
+    <h3>
+        <img src="3761.png" width="100" alt="Logo">
+    </h3>
+
+
+    <div class="header-box"></div>
+    <h1>Axel</h1>
+    Just click and copy!
+    <div class="buttons-container">
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">None</button>
+            None
+        </div>
+        <!-- Repeat the structure for other buttons and descriptions -->
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard('https://www.youtube.com/shorts/-nmmt_X7N0A')">Little Gripper</button>
+            Gojo Vs Little Gripper
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">None</button>
+            None
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">None</button>
+            None
+        </div>
+        <div class="button-with-desc">
+            <button class="copy-button" onclick="copyTextToClipboard(' ')">None</button>
+            None
+        </div>
     </div>
-    <div class="boxes">
-        <div class="box" onclick="copyText('Link 1')">
-            <p class="box-text">Copy Text 1</p>
-            <p class="box-description">Description 1</p>
-        </div>
-        <div class="box" onclick="copyText('Link 2')">
-            <p class="box-text">Copy Text 2</p>
-            <p class="box-description">Description 2</p>
-        </div>
-        <div class="box" onclick="copyText('Link 3')">
-            <p class="box-text">Copy Text 3</p>
-            <p class="box-description">Description 3</p>
-        </div>
-        <div class="box" onclick="copyText('Link 4')">
-            <p class="box-text">Copy Text 4</p>
-            <p class="box-description">Description 4</p>
-        </div>
-        <div class="box" onclick="copyText('Link 5')">
-            <p class="box-text">
+    <script>
+        function copyTextToClipboard(textToCopy) {
+            var tempInput = document.createElement("input");
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Copied to clipboard: " + textToCopy);
+        }
+    </script>
+</body>
+
+
+</html>
+
+
+
